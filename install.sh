@@ -70,5 +70,10 @@ mv update.sh $SCRIPTS_FOLDER
 mv clean.sh $SCRIPTS_FOLDER
 mv monoaudio.sh $SCRIPTS_FOLDER
 
+echo "\n\nSETUP DOTFILES"
+git clone https://github.com/fritzzin/dotfiles
+cd dotfiles
+mv .config/nvim ~/.config/
+sudo luarocks install luafilesystem
 
 echo "\n\nDONE \n\n"
