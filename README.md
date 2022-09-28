@@ -1,4 +1,4 @@
-# linuxinstall
+# Linux Install
 These are some scripts that I use to setup my Debian based distros and WSL environment alongside the [dotfiles](https://github.com/Fritzzin/dotfiles) repo. The scripts are meant for my personal use, so I won't be responsible for any damage or harm done to your system.
 
 ## Installation
