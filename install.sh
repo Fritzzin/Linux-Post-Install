@@ -70,10 +70,22 @@ mv update.sh $SCRIPTS_FOLDER
 mv clean.sh $SCRIPTS_FOLDER
 mv monoaudio.sh $SCRIPTS_FOLDER
 
+# Settings up dotfiles from github repo
 echo "\n\nSETUP DOTFILES"
 git clone https://github.com/fritzzin/dotfiles
 cd dotfiles
 mv .config/nvim ~/.config/
+
+# Lua rocks
 sudo luarocks install luafilesystem
+
+# Installing Packer plugin manager for nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# Installing nvim from github
+wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
+sudo dpkg --install nvim-linux64.deb
+sudo apt install -f
 
 echo "\n\nDONE \n\n"
