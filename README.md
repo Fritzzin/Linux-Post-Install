@@ -1,5 +1,7 @@
 # Linux Install
-These are some scripts that I use to setup my Debian based distros and WSL environment alongside the [dotfiles](https://github.com/Fritzzin/dotfiles) repo. The scripts are meant for my personal use, so I won't be responsible for any damage or harm done to your system.
+These are some scripts that I use to setup my Debian based distros and WSL environment alongside the [dotfiles](https://github.com/Fritzzin/dotfiles) repo. 
+
+:warning: The scripts are meant for personal use, so I won't be responsible for any damage or harm done to your system. :warning:
 
 ## Installation
 Clone the repository into your system, open the folder and then run the install.sh script to start the process.
