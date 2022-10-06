@@ -74,7 +74,7 @@ mv monoaudio.sh $SCRIPTS_FOLDER
 echo "\n\nSETUP DOTFILES"
 git clone https://github.com/fritzzin/dotfiles
 cd dotfiles
-mv .config/nvim ~/.config/
+mv .config/nvim/ ~/.config/
 
 # Lua rocks
 sudo luarocks install luafilesystem
