@@ -74,6 +74,7 @@ mv monoaudio.sh $SCRIPTS_FOLDER
 echo "\n\nSETUP DOTFILES"
 git clone https://github.com/fritzzin/dotfiles
 cd dotfiles
+mkdir ~/.config/nvim/
 mv .config/nvim/ ~/.config/
 
 # Lua rocks
