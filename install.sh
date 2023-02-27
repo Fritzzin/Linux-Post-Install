@@ -21,7 +21,6 @@ sudo apt install -y wget \
                     git \
                     nodejs \
                     npm \
-                    luarocks \
                     tlp \
                     tlp-rdw \
                     ufw \
@@ -46,6 +45,7 @@ echo "\n\nENABLE TLP"
 sudo tlp start
 sudo systemctl enable tlp
 
+
 # Creating bash_aliases file
 echo "\n\nCREATING BASH ALIASES"
 touch ~/.bash_aliases
@@ -57,36 +57,15 @@ alias aliases=\"nano ${HOME}/.bash_aliases\"
 # MAINTENANCE
 alias update=\"${SCRIPTS_FOLDER}/update.sh\"
 alias clean=\"${SCRIPTS_FOLDER}/clean.sh\"
-
-# DOTFILES
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 " >> ~/.bash_aliases
 
+
 # Creating .scripts folder
-echo "\n\nCREATING SCRIPTS FOLDER AND MOVING SCRIPTS"
+echo "\n\nCREATING FOLDER AND MOVING SHELL SCRIPTS"
 mkdir $SCRIPTS_FOLDER
 chmod +x *.sh
 mv update.sh $SCRIPTS_FOLDER
 mv clean.sh $SCRIPTS_FOLDER
 mv monoaudio.sh $SCRIPTS_FOLDER
-
-# Settings up dotfiles from github repo
-echo "\n\nSETUP DOTFILES"
-git clone https://github.com/fritzzin/dotfiles
-cd dotfiles
-mkdir ~/.config/nvim/
-mv .config/nvim/ ~/.config/
-
-# Lua rocks
-sudo luarocks install luafilesystem
-
-# Installing Packer plugin manager for nvim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-# Installing nvim from github
-wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
-sudo dpkg --install nvim-linux64.deb
-sudo apt install -f
 
 echo "\n\nDONE \n\n"
