@@ -1,5 +1,5 @@
 # Linux Post-Install script (Debian based)
-These are some scripts that I use to setup Debian based distros alongside the [dotfiles](https://github.com/Fritzzin/dotfiles) repo. 
+These are some scripts that I use to setup Debian based distros.
 
 :warning:The scripts are meant for personal use. I won't be responsible for any damage or harm done to your system!:warning:
 
