@@ -1,5 +1,5 @@
-# Linux Install
-These are some scripts that I use to setup my Debian based distros and WSL environment alongside the [dotfiles](https://github.com/Fritzzin/dotfiles) repo. 
+# Linux Post-Install script (Debian based)
+These are some scripts that I use to setup Debian based distros alongside the [dotfiles](https://github.com/Fritzzin/dotfiles) repo. 
 
 :warning:The scripts are meant for personal use. I won't be responsible for any damage or harm done to your system!:warning:
 
@@ -21,7 +21,7 @@ git clone https://github.com/fritzzin/linuxinstall && cd linuxinstall/ && ./inst
 ```
 
 ## Usage
-After the ```install.sh``` runs, all the other scripts will be located at the ```$HOME/.scripts/``` folder. The ```install.sh``` script also adds an alias for each script, so it can run directly from the terminal at any place.
+After the ```install.sh``` runs, all the other scripts will be moved to the ```$HOME/.scripts/``` folder. The ```install.sh``` script also adds an alias for each script, so it can run directly from the terminal without having to access the folder again as a shortcut.
 
 ### update.sh
 Updates the repositories and then upgrades the packages via apt.
@@ -33,6 +33,7 @@ To run, simply type ```clean``` on the terminal.
 
 ### monoaudio.sh
 One of my laptop speakers died, so this is a fix I've found for it.
+
 If required, should add as an autostart for your system.
 ```bash
 crontab -e
